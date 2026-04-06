@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h2>Loan Approval Prediction</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        Income: <input type="number" name="income" required><br><br>
+        Credit Score: <input type="number" name="credit_score" required><br><br>
+        Loan Amount: <input type="number" name="loan_amount" required><br><br>
+
+        Employment Status:
+        <select name="employment_status">
+            <option>Employed</option>
+            <option>Self-Employed</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
